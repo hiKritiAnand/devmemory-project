@@ -1,0 +1,20 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "devmemory",
+            "args": [
+              "check-session",
+              "--path",
+              "${CLAUDE_PROJECT_DIR}"
+            ],
+            "timeout": 60
+          }
+        ]
+      }
+    ]
+  }
+}

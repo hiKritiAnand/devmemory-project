@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "devmemory"
+version = "0.2.0"
+description = "Agent-agnostic decision-record memory and code-structure knowledge graph for a codebase, usable from any AI coding tool."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+    { name = "Kriti Anand" },
+]
+keywords = ["ai", "agents", "coding-assistant", "memory", "mcp", "knowledge-graph", "claude-code", "cursor"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Documentation",
+]
+dependencies = [
+    "tree-sitter",
+    "tree-sitter-language-pack",
+]
+
+[project.urls]
+Homepage = "https://github.com/hiKritiAnand/devmemory-project"
+Repository = "https://github.com/hiKritiAnand/devmemory-project"
+Issues = "https://github.com/hiKritiAnand/devmemory-project/issues"
+
+[project.scripts]
+devmemory = "devmemory.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "build"]
+mcp = ["mcp>=2.0.0"]
+
+[tool.setuptools.packages.find]
+include = ["devmemory", "devmemory.*"]
